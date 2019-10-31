@@ -120,8 +120,9 @@ server.put("/api/users/:id", (req, res) => {
         });
       }
     })
-    .catch(err => console.log(err));
-  res
-    .status(500)
-    .send({ message: "The user information could not be modified." });
+    .catch(err =>
+      res
+        .status(500)
+        .send({ message: "The user information could not be modified." })
+    );
 });
